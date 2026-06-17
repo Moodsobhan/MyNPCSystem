@@ -1,14 +1,10 @@
-local github = "https://raw.githubusercontent.com/Moodsobhan/MyNPCSystem/main/NPC"
+local github = "YOUR_RAW_GITHUB_LINK"
 
 local Module = loadstring(game:HttpGet(github .. "/module.Luau"))()
 local Data = loadstring(game:HttpGet(github .. "/table.luau"))()
 
-local UI = Module.create()
-
-for _, Button in ipairs(Data.Buttons) do
-	UI:Button(Button.Name, function()
-		print(Button.Description)
-	end)
+for _, npc in ipairs(Data.NPCs) do
+    Module.PrintNPC(npc)
 end
 
 print("NPC System Loaded!")
