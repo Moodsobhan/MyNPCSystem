@@ -1,17 +1,9 @@
 local Module = {}
 
-function Module.create()
-    local UI = {}
-
-    function UI:Button(Name, Callback)
-        print("Button Created: "..Name)
-
-        if Callback then
-            Callback()
-        end
-    end
-
-    return UI
+function Module.PrintNPC(npc)
+    print("NPC:", npc.Name)
+    print("Health:", npc.Health)
+    print("Speed:", npc.Speed)
 end
 
 return Module
