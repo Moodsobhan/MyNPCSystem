@@ -1,17 +1,14 @@
-local Module = {}
+local github = "https://raw.githubusercontent.com/Moodsobhan/MyNPCSystem/main/NPC"
 
-function Module.create()
-    local UI = {}
+local Module = loadstring(game:HttpGet(github .. "/module.Luau"))()
+local Data = loadstring(game:HttpGet(github .. "/table.luau"))()
 
-    function UI:Button(Name, Callback)
-        print("Button Created: "..Name)
+local UI = Module.create()
 
-        if Callback then
-            Callback()
-        end
-    end
-
-    return UI
+for _, Button in ipairs(Data.Buttons) do
+	UI:Button(Button.Name, function()
+		print(Button.Description)
+	end)
 end
 
-return Module
+print("NPC System Loaded!")
