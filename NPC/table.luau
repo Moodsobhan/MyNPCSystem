@@ -1,18 +1,14 @@
 return {
-    Buttons = {
+    NPCs = {
         {
-            Name = "Hello NPC",
-            Description = "Print a message"
+            Name = "Guard",
+            Health = 100,
+            Speed = 16
         },
-
         {
-            Name = "Follow",
-            Description = "NPC follows player"
-        },
-
-        {
-            Name = "Stop",
-            Description = "NPC stops moving"
+            Name = "Merchant",
+            Health = 50,
+            Speed = 12
         }
     }
 }
