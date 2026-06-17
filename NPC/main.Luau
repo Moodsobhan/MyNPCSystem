@@ -1,18 +1,17 @@
-return {
-    Buttons = {
-        {
-            Name = "Hello NPC",
-            Description = "Print a message"
-        },
+local Module = {}
 
-        {
-            Name = "Follow",
-            Description = "NPC follows player"
-        },
+function Module.create()
+    local UI = {}
 
-        {
-            Name = "Stop",
-            Description = "NPC stops moving"
-        }
-    }
-}
+    function UI:Button(Name, Callback)
+        print("Button Created: "..Name)
+
+        if Callback then
+            Callback()
+        end
+    end
+
+    return UI
+end
+
+return Module
