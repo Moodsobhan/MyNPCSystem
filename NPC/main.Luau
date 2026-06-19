@@ -1,4 +1,4 @@
-local github = "YOUR_RAW_GITHUB_LINK"
+local github = "https://raw.githubusercontent.com/Moodsobhan/MyNPCSystem/refs/heads/Main/NPC/main.Luau"
 
 local Module = loadstring(game:HttpGet(github .. "/module.Luau"))()
 local Data = loadstring(game:HttpGet(github .. "/table.luau"))()
